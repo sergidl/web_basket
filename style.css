@@ -5,9 +5,12 @@ body{
 *{
     font-family: Arial, Helvetica, sans-serif;
     color: white;
-    cursor: url(https://cdn.custom-cursor.com/db/pointer/32/Basketball.png) , pointer;
+    cursor: url(https://cdn.custom-cursor.com/db/pointer/32/Basketball.png) 4 16, auto;
 }
-p{
+.inscription,.inscription>*,.inscription>*>*,.inscription>*>*>*{
+    cursor:default;
+}
+p,label,li,h3{
     font-size: 1vw;
 }
 h2{
@@ -25,6 +28,10 @@ header{
     width: 50%;
 }
 
+section{
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
 .logo{
     width: 10%;
     height: 10%;
@@ -43,7 +50,7 @@ article{
     display: inline-block;
 }
 .street{
-    width: 30%;
+    width: 30vmax;
     height: auto;
 }
 .concurs{
@@ -53,10 +60,10 @@ article{
     display: flex;
 }
 .liga>img{
-    width: 30%;
+    width: 30vmax;
 }
 .concurs>article>img{
-        width: 30%;
+        width: 30vmax;
     }
 .prizes>article{
     display: block;
@@ -76,7 +83,6 @@ li::before{
     
 }
 
-
 form>input,select,select>option,button{
     color: #000000;
 }
@@ -87,30 +93,63 @@ form{
 text-align: center;
 }
 input,button,select{
+    font-size: 1vw;
+    width: 10vw;
     margin: 1vmin;
+    height: 1.5vw;
 }
+input,select{
+    margin-right: 9vmin;
+    margin-bottom: 4vmin;
+
+}
+
 @media (max-width:800px) {
     #basket{
         display: none;
     }
-    p{
+    p,label,li,h3{
         font-size: 2vw;
     }
     h2{
         font-size: 4vw;
     }
+
+
     li::before{
         content: 'º - ';
         position: relative;
         left: -1vw;
     }
+    input,button,select{
+        font-size: 2vw;
+        width: 50vw;
+        margin: 1vmin;
+        height: 2.5vw;
+    }
+    input,select{
+        margin-right: 9vmin;
+        margin-bottom: 4vmin;
+    
+    }
 }
 @media (max-width:620px) {
-    p{
+    p,label,li,h3{
         font-size: 2.5vw;
     }
     h2{
         font-size: 5vw;
+    }
+    input,button,select{
+        font-size: 2.5vw;
+        width: 65vw;
+        margin: 1vmin;
+        height: 3vw;
+    }
+    input,select{
+        margin-right: 9vmin;
+        margin-bottom: 4vmin;
+    
     }
     li::before{
         content: 'º - ';

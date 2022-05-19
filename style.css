@@ -39,6 +39,13 @@ section {
     margin-right: 15vw;
 }
 
+#fonts{
+    position: fixed;
+    top: 1em;
+    left: 1em;
+    
+}
+
 .logo {
     width: 10%;
     height: 10%;

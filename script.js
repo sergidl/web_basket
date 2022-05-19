@@ -1,8 +1,8 @@
 function inici() {
-    niv = document.getElementById("niv");
+    let niv = document.getElementById("niv");
 
-    tag_select = document.getElementById("concurso");
-    basket = document.getElementById('basket')
+   let tag_select = document.getElementById("concurso");
+   let basket = document.getElementById('basket')
     tag_select.addEventListener("change", select_form, false);
 
 
@@ -82,24 +82,186 @@ function inici() {
 
 
 
-    // let OSName = "Unknown OS";
-    // if (navigator.appVersion.indexOf("Win") != -1) OSName = "Windows";
-    // if (navigator.appVersion.indexOf("Mac") != -1) OSName = "MacOS";
-    // if (navigator.appVersion.indexOf("X11") != -1) OSName = "UNIX";
-    // if (navigator.appVersion.indexOf("Linux") != -1) OSName = "Linux";
-    // if (navigator.appVersion.indexOf("Win") != -1) {
-        
-    // }
-    // else {
-    //     basket.style.display='none';
-    // }
+    function select_form() {
+        // @ts-ignore
+        if (tag_select.value == 'liga') {
+            niv.style.display = 'inline';
+        }
+        else {
+            niv.style.display = 'none';
+        }
+    }
+  }
+  
+
+
+
+let up = document.getElementById('up');
+let down = document.getElementById('down');
+
+function upFont() {
+	let p = document.getElementsByTagName('p');
+	let a = document.getElementsByTagName('a');
+	let div = document.getElementsByTagName('div');
+  let h2 = document.getElementsByTagName('h2');
+  let h3 = document.getElementsByTagName('h3');
+  let li = document.getElementsByTagName('li');
+  let label = document.getElementsByTagName('label');
+  let option = document.getElementsByTagName('select');
+  let input = document.getElementsByTagName('input');
+  let button = document.getElementsByTagName('button');
+
+
+	Array.from(p).forEach(element => {
+		let style = window.getComputedStyle(element, null).getPropertyValue('font-size');
+		let fontSize = parseFloat(style);
+		element.style.fontSize = (fontSize + 1) + 'px';
+	});
+	Array.from(a).forEach(element => {
+		let style = window.getComputedStyle(element, null).getPropertyValue('font-size');
+		let fontSize = parseFloat(style);
+		element.style.fontSize = (fontSize + 1) + 'px';
+	});
+	Array.from(div).forEach(element => {
+		let style = window.getComputedStyle(element, null).getPropertyValue('font-size');
+		let fontSize = parseFloat(style);
+		element.style.fontSize = (fontSize + 1) + 'px';
+	});
+  Array.from(h2).forEach(element => {
+    let style = window.getComputedStyle(element, null).getPropertyValue('font-size');
+    let fontSize = parseFloat(style);
+    element.style.fontSize = (fontSize + 1) + 'px';
+  });
+  Array.from(h3).forEach(element => {
+    let style = window.getComputedStyle(element, null).getPropertyValue('font-size');
+    let fontSize = parseFloat(style);
+    element.style.fontSize = (fontSize + 1) + 'px';
+  });
+  Array.from(li).forEach(element => {
+    let style = window.getComputedStyle(element, null).getPropertyValue('font-size');
+    let fontSize = parseFloat(style);
+    element.style.fontSize = (fontSize + 1) + 'px';
+  });
+  Array.from(label).forEach(element => {
+    let style = window.getComputedStyle(element, null).getPropertyValue('font-size');
+    let fontSize = parseFloat(style);
+    element.style.fontSize = (fontSize + 1) + 'px';
+  });
+  Array.from(option).forEach(element => {
+    let style = window.getComputedStyle(element, null).getPropertyValue('font-size');
+    let fontSize = parseFloat(style);
+    style=window.getComputedStyle(element, null).getPropertyValue('height');
+    let height = parseFloat(style);
+    style=window.getComputedStyle(element, null).getPropertyValue('width');
+    let width = parseFloat(style);
+    element.style.fontSize = (fontSize + 1) + 'px';
+    element.style.height = (height + 2) + 'px';
+    element.style.width = (width + 5) + 'px';
+  });
+  Array.from(input).forEach(element => {
+    let style = window.getComputedStyle(element, null).getPropertyValue('font-size');
+    let fontSize = parseFloat(style);
+    style=window.getComputedStyle(element, null).getPropertyValue('height');
+    let height = parseFloat(style);
+    style=window.getComputedStyle(element, null).getPropertyValue('width');
+    let width = parseFloat(style);
+    element.style.fontSize = (fontSize + 1) + 'px';
+    element.style.height = (height + 2) + 'px';
+    element.style.width = (width + 5) + 'px';
+  });
+  Array.from(button).forEach(element => {
+    let style = window.getComputedStyle(element, null).getPropertyValue('font-size');
+    let fontSize = parseFloat(style);
+    style=window.getComputedStyle(element, null).getPropertyValue('height');
+    let height = parseFloat(style);
+    style=window.getComputedStyle(element, null).getPropertyValue('width');
+    let width = parseFloat(style);
+    element.style.fontSize = (fontSize + 1) + 'px';
+    element.style.height = (height + 2) + 'px';
+    element.style.width = (width + 5) + 'px';
+  });
+
 }
-function select_form() {
-    if (tag_select.value == 'liga') {
-        niv.style.display = 'inline';
-    }
-    else {
-        niv.style.display = 'none';
-    }
+function downFont() {
+	let p = document.getElementsByTagName('p');
+	let a = document.getElementsByTagName('a');
+	let div = document.getElementsByTagName('div');
+  let h2 = document.getElementsByTagName('h2');
+  let h3 = document.getElementsByTagName('h3');
+  let li = document.getElementsByTagName('li');
+  let label = document.getElementsByTagName('label');
+  let option = document.getElementsByTagName('select');
+  let input = document.getElementsByTagName('input');
+  let button = document.getElementsByTagName('button');
+
+
+	Array.from(p).forEach(element => {
+		let style = window.getComputedStyle(element, null).getPropertyValue('font-size');
+		let fontSize = parseFloat(style);
+		element.style.fontSize = (fontSize - 1) + 'px';
+	});
+	Array.from(a).forEach(element => {
+		let style = window.getComputedStyle(element, null).getPropertyValue('font-size');
+		let fontSize = parseFloat(style);
+		element.style.fontSize = (fontSize - 1) + 'px';
+	});
+	Array.from(div).forEach(element => {
+		let style = window.getComputedStyle(element, null).getPropertyValue('font-size');
+		let fontSize = parseFloat(style);
+		element.style.fontSize = (fontSize - 1) + 'px';
+	});
+  Array.from(h2).forEach(element => {
+    let style = window.getComputedStyle(element, null).getPropertyValue('font-size');
+    let fontSize = parseFloat(style);
+    element.style.fontSize = (fontSize - 1) + 'px';
+  });
+  Array.from(h3).forEach(element => {
+    let style = window.getComputedStyle(element, null).getPropertyValue('font-size');
+    let fontSize = parseFloat(style);
+    element.style.fontSize = (fontSize - 1) + 'px';
+  });
+  Array.from(li).forEach(element => {
+    let style = window.getComputedStyle(element, null).getPropertyValue('font-size');
+    let fontSize = parseFloat(style);
+    element.style.fontSize = (fontSize - 1) + 'px';
+  });
+  Array.from(label).forEach(element => {
+    let style = window.getComputedStyle(element, null).getPropertyValue('font-size');
+    let fontSize = parseFloat(style);
+    element.style.fontSize = (fontSize - 1) + 'px';
+  });
+  Array.from(option).forEach(element => {
+    let style = window.getComputedStyle(element, null).getPropertyValue('font-size');
+    let fontSize = parseFloat(style);
+    style=window.getComputedStyle(element, null).getPropertyValue('height');
+    let height = parseFloat(style);
+    style=window.getComputedStyle(element, null).getPropertyValue('width');
+    let width = parseFloat(style);
+    element.style.fontSize = (fontSize - 1) + 'px';
+    element.style.height = (height - 2) + 'px';
+    element.style.width = (width - 5) + 'px';
+  });
+  Array.from(input).forEach(element => {
+    let style = window.getComputedStyle(element, null).getPropertyValue('font-size');
+    let fontSize = parseFloat(style);
+    style=window.getComputedStyle(element, null).getPropertyValue('height');
+    let height = parseFloat(style);
+    style=window.getComputedStyle(element, null).getPropertyValue('width');
+    let width = parseFloat(style);
+    element.style.fontSize = (fontSize - 1) + 'px';
+    element.style.height = (height - 2) + 'px';
+    element.style.width = (width - 5) + 'px';
+  });
+  Array.from(button).forEach(element => {
+    let style = window.getComputedStyle(element, null).getPropertyValue('font-size');
+    let fontSize = parseFloat(style);
+    style=window.getComputedStyle(element, null).getPropertyValue('height');
+    let height = parseFloat(style);
+    style=window.getComputedStyle(element, null).getPropertyValue('width');
+    let width = parseFloat(style);
+    element.style.fontSize = (fontSize - 1) + 'px';
+    element.style.height = (height - 2) + 'px';
+    element.style.width = (width - 5) + 'px';
+  });
 }
 window.addEventListener("load", inici, false);
